@@ -1,0 +1,11 @@
+{
+    "name": "user/tarefas-php",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Renan de Faria",
+            "email": "renandefaria2009@hotmail.com"
+        }
+    ],
+    "require": {}
+}
