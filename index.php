@@ -1,12 +1,23 @@
 <?php
-require_once __DIR__."/vendor/autoload.php";
+
+// require_once "./vendor/autoload.php";
+// require_once __DIR__."/vendor/autoload.php";
 
 // $uri = $_SERVER['REQUEST_URI'];
 // echo "uri=".$uri."<br>";
 
-// $uriPath = parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);
-// echo "uriPath=".$uriPath;
 require_once 'routes/routeController.php';
 use routes\routeController;
+
+//banco
+require_once 'models/user.php';
+require_once 'models/mes.php';
+require_once 'models/dias.php';
+
+User::initDB();
+Mes::initDB();
+Dias::initDB();
+
+// iniciando ROUTES
 
 $rotas = new routeController;

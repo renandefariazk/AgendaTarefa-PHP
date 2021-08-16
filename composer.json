@@ -7,5 +7,9 @@
             "email": "renandefaria2009@hotmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+        }
+    }
 }

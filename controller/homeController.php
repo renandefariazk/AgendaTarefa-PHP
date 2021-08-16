@@ -8,7 +8,6 @@ class homeController{
     function index(){
         $this->renderTemp("home.php","template.php");
     }
-
 // funcion callback
     function content(){
         require_once $this->template;

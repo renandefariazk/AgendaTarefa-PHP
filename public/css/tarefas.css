@@ -1,0 +1,52 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.header{
+    height: 100px;
+    width: 100%;
+    background-color: darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoFrase{
+    color: thistle;
+}
+.main{
+    background-color: darkblue;
+    height: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.calendarioContainer{
+    background-color: white;
+    border-radius: 15px;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.mesCalendarioContainer{
+    width: 100%;
+    height: 33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.mesCalendario{
+    height: 100%;
+    width: 20%;
+    background-color: whitesmoke;
+    border: 1px solid black;
+}
+.mesContainerCenter{
+    margin: 10px 0px;
+}
