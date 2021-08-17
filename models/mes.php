@@ -1,4 +1,6 @@
 <?php
+namespace models;
+use PDO;
 
 class Mes {
     public $banco;
@@ -6,11 +8,6 @@ class Mes {
     function __construct(){
         $this->banco = new PDO("mysql:host=localhost;dbname=tarefas", "root", "");
     }
-        // foreign key esta faltando
-        // FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)
-        // ou renomeando
-        // CONSTRAINT FK_PersonOrder FOREIGN KEY (PersonID)
-        // REFERENCES Persons(PersonID)
     static function initDB(){
         $bancos = new PDO("mysql:host=localhost;dbname=tarefas", "root", "");
         $bancos->exec("CREATE TABLE IF NOT EXISTS mes(

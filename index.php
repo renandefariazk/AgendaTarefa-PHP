@@ -11,7 +11,9 @@ use routes\routeController;
 
 //banco
 require_once 'models/user.php';
+use models\User;
 require_once 'models/mes.php';
+use models\Mes;
 require_once 'models/dias.php';
 
 User::initDB();

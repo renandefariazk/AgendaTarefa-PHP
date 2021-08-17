@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="public/css/tarefas.css">
     <title>CalendarioTarefas</title>
 </head>
-<body>
+<body class="bodyContainer">
     <header class="header">
         <h1 class="logoFrase">Tarefas</h1>
     </header>
@@ -33,5 +33,16 @@
             </div>
         </section>
     </main>
+    <section class="modal modalOff">
+        <div class="modalContainer">
+            <div class="modalCalendarioContainer">
+                <div class="modalTitulo">
+                    <p class="modalTituloText"></p>
+                </div>
+                <div class="modalCalendarioDias"></div>
+            </div>
+        </div>
+    </section>
+    <script src="public/js/tarefas.js"></script>
 </body>
 </html>

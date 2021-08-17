@@ -17,6 +17,9 @@ class routeController{
         $this->route['/TarefasPHP/tarefas'] = array("controller"=>"tarefasController","action"=>"index");
         // nao esta funcionando vazio
         $this->route['/'] = array("controller"=>"homeController","action"=>"index");
+
+        // login
+        $this->route['/TarefasPHP/login'] = array("controller"=>"loginController","action"=>"login");
     }
     function run($url){
         if(array_key_exists($url, $this->route)){
