@@ -15,6 +15,7 @@ use models\User;
 require_once 'models/mes.php';
 use models\Mes;
 require_once 'models/dias.php';
+use models\Dias;
 
 User::initDB();
 Mes::initDB();

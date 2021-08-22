@@ -3,6 +3,7 @@ namespace routes;
 
 require_once "./controller/homeController.php";
 require_once "./controller/tarefasController.php";
+require_once "./controller/cadastroController.php";
 
 class routeController{
     private $route;
@@ -13,13 +14,17 @@ class routeController{
     }
     function initRoute(){
         $this->route['/TarefasPHP/'] = array("controller"=>"homeController","action"=>"index");
-        $this->route['/TarefasPHP/tarefas/'] = array("controller"=>"tarefasController","action"=>"index");
-        $this->route['/TarefasPHP/tarefas'] = array("controller"=>"tarefasController","action"=>"index");
         // nao esta funcionando vazio
         $this->route['/'] = array("controller"=>"homeController","action"=>"index");
-
+        // tarefas
+        $this->route['/TarefasPHP/tarefas/'] = array("controller"=>"tarefasController","action"=>"index");
+        $this->route['/TarefasPHP/tarefas'] = array("controller"=>"tarefasController","action"=>"index");
         // login
+        $this->route['/TarefasPHP/login/'] = array("controller"=>"loginController","action"=>"login");
         $this->route['/TarefasPHP/login'] = array("controller"=>"loginController","action"=>"login");
+        // Cadastro
+        $this->route['/TarefasPHP/cadastro/'] = array("controller"=>"cadastroController","action"=>"cadastrar");
+        $this->route['/TarefasPHP/cadastro'] = array("controller"=>"cadastroController","action"=>"cadastrar");
     }
     function run($url){
         if(array_key_exists($url, $this->route)){

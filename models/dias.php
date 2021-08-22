@@ -1,5 +1,8 @@
 <?php
 
+namespace models;
+use PDO;
+
 class Dias {
     public $banco;
 

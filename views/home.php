@@ -19,10 +19,29 @@
                     <input id="login" name="login" type="text" class="inputUser">
                     <label for="senha">Senha</label>
                     <input id="senha" name="senha" type="password" class="inputUser">
-                    <input type="submit">
+                    <input type="submit" value="Entrar">
+                    <div class="buttonCadastro">
+                        <p class="buttonTextCadastro">Criar Conta</p>
+                    </div>
                 </form>
             </div>
         </section>
     </main>
+    <section class="modal modalOff">
+        <div class="modalContainer">
+            <section class="formModalContainer">
+                <form class="formModal" action="http://localhost/TarefasPHP/cadastro" method="POST">
+                    <label for="nameConta">Login</label>
+                    <input name="login" id="nameConta" type="text">
+                    <label for="passwordConta">Password</label>
+                    <input name="password" id="passwordConta" type="password">
+                    <label for="passwordRe">Password Repeat</label>
+                    <input id="passwordRe" type="password">
+                    <input type="submit" value="Criar">
+                </form>
+            </section>
+        </div>
+    </section>
+    <script src="public/js/home.js"></script>
 </body>
 </html>

@@ -20,14 +20,20 @@ class User {
     }
     public function list (){
         $db = $this->banco->prepare("SELECT * FROM user");
-        $select = $db->execute();
-        return $select;
+        $db->execute();
+        return $db->fetch();
     }
     public function findOne($nome,$senha){
         $db = $this->banco->prepare("SELECT * FROM user WHERE nome = :nome and senha = :senha");
         $st = $db->banco->bindParam(":nome",$nome); 
         $st = $db->banco->bindParam(":senha",$senha);
         $exec = $st->execute();
-        return $exec;
+        return $exec->fetch();
+    }
+    public function create($nome,$senha){
+        $usuario = $this->banco->prepare("INSERT INTO user SET nome = :nome, senha = :senha");
+        $usuario->bindParam("nome",$nome);
+        $usuario->bindParam("senha",$senha);
+        $usuario->execute();
     }
 }
