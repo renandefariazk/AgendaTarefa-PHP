@@ -16,9 +16,11 @@ class cadastroController{
             $nome = $_POST["login"];
             $senha = $_POST["password"];
             if($this->User->findOne($nome,$senha)){
+                header("Location:http://localhost/TarefasPHP/");
                 throw new Exception("Esta conta ja Existe");
             }else{
                 $this->User->create($nome,$senha);
+                header("Location:http://localhost/TarefasPHP/");
                 return json_encode(array("status"=>"200","messsage"=>"Cadastro Realizado"));
             }
         }catch(Exception $e){

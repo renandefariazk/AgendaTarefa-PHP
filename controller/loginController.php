@@ -13,11 +13,11 @@ class loginController {
     }
     public function login(){
         try{
-            $conta = $this->User->findOne($_POST['login'],$_POST['senha']);
-            if($conta->fetch()){
+            $conta = $this->User->findOne($_GET["login"],$_GET["senha"]);
+            if($conta){
                 session_start();
-                $_SESSION["login"] = $_POST['login'];
-                $_SESSION["senha"] = $_POST['senha'];
+                $_SESSION["login"] = $_GET['login'];
+                $_SESSION["senha"] = $_GET['senha'];
                header("Location:http://localhost/TarefasPHP/tarefas");
             } else{
                 session_start();

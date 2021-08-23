@@ -1,9 +1,9 @@
-<?php 
+<!--
 session_start();
 if(isset($_SESSION["login"]) || empty($_SESSION["login"])){
     header("Location:http://localhost/TarefasPHP");
 }
-?>
+-->
 
 <!DOCTYPE html>
 <html lang="pt-br">

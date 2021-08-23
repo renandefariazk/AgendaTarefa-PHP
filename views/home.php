@@ -14,7 +14,7 @@
         </section>
         <section class="mainRight">
             <div class="cadastroContainer">
-                <form action="http://localhost/TarefasPHP/login" class="formContainer">
+                <form action="http://localhost/TarefasPHP/login" class="formContainer" method="GET">
                     <label for="login">Login</label>
                     <input id="login" name="login" type="text" class="inputUser">
                     <label for="senha">Senha</label>

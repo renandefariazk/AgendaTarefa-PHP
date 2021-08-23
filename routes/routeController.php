@@ -4,6 +4,7 @@ namespace routes;
 require_once "./controller/homeController.php";
 require_once "./controller/tarefasController.php";
 require_once "./controller/cadastroController.php";
+require_once "./controller/loginController.php";
 
 class routeController{
     private $route;

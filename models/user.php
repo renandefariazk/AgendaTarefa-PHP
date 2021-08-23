@@ -25,10 +25,10 @@ class User {
     }
     public function findOne($nome,$senha){
         $db = $this->banco->prepare("SELECT * FROM user WHERE nome = :nome and senha = :senha");
-        $st = $db->banco->bindParam(":nome",$nome); 
-        $st = $db->banco->bindParam(":senha",$senha);
-        $exec = $st->execute();
-        return $exec->fetch();
+        $db->bindParam(":nome",$nome); 
+        $db->bindParam(":senha",$senha);
+        $db->execute();
+        return $db->fetch();
     }
     public function create($nome,$senha){
         $usuario = $this->banco->prepare("INSERT INTO user SET nome = :nome, senha = :senha");
