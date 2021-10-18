@@ -11,7 +11,6 @@ class routeController{
     function __construct(){
         $this->initRoute();
         $this->run($this->getURL());
-
     }
     function initRoute(){
         $this->route['/TarefasPHP/'] = array("controller"=>"homeController","action"=>"index");

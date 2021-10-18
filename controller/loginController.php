@@ -15,6 +15,7 @@ class loginController {
         try{
             $conta = $this->User->findOne($_GET["login"],$_GET["senha"]);
             if($conta){
+                // a session esta sendo perdida ao trocar de pagina;
                 session_start();
                 $_SESSION["login"] = $_GET['login'];
                 $_SESSION["senha"] = $_GET['senha'];
